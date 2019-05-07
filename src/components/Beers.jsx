@@ -29,7 +29,10 @@ Beers.propTypes = {
     name: PropTypes.string.isRequired,
     brand: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    alcoholContent: PropTypes.number.isRequired
+    alcoholContent: PropTypes.number.isRequired,
+    currentRouterPath: PropTypes.string,
+    onBeersSelection: PropTypes.func,
+    beersId: PropTypes.string.isRequired
 };
 
 export default Beers;
