@@ -1,14 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+import { AppContainer } from 'react-hot-loader';
+import { HashRouter }  from 'react-router-dom';
 
-function Error404(props) {
-    return (
-        <div>
-            <h2>The page {props.location.pathname} does not exist!</h2>
-            <h3>Would you like to return <Link to="/">home</Link> instead?</h3>
-        </div>
+const render = (Component) => {
+    ReactDOM.render(
+        <AppContainer>
+            <HashRouter>
+                <Component/>
+            </HashRouter>
+        </AppContainer>,
+        document.getElementById('react-app-root')
     );
-}
+};
 
-export default Error404;
+render(App);
+
+/*eslint-disable */
+if (module.hot) {
+    module.hot.accept('./components/App', () => {
+        render(App);
+    });
+}
+/*eslint-enable */
