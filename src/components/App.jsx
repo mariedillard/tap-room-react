@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import BeersList from './BeersList';
+import NewBeersForm from './NewBeersForm';
 import About from './About';
 import Admin from './Admin';
-import NewBeersControl from './NewBeersControl';
 import HomePage from './HomePage';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
@@ -43,7 +43,7 @@ class App extends React.Component {
                     <Route path='/admin' render={()=><Admin beersList={this.state.masterBeersList} 
                         onBeersSelection={this.handleChangingSelectedBeers}
                         selectedBeers={this.state.selectedBeers}/>} />
-                    <Route path='/admin/newbeer' render={()=><NewBeersControl onNewBeersCreation={this.handleAddingNewBeersToList}/> } />
+                    <Route path='/newbeer' render={()=><NewBeersForm onNewBeersCreation={this.handleAddingNewBeersToList} />} />
                     <Route component={Error404} />
                 </Switch>
             </div>

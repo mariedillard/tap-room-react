@@ -30,15 +30,16 @@ function NewBeersForm(props) {
                     placeholder='Brand'
                     ref={(input) => {_brand = input;}}/>
                 <input 
-                    type='number'
+                    type='text'
                     id='price' 
                     placeholder='Price'
                     ref={(input) => {_price = input;}}/>
                 <input 
-                    type='number' 
+                    type='text' 
                     id='alcoholContent' 
                     placeholder='Alcohol Content' 
                     ref={(input) => {_alcoholContent = input;}}/>
+                <button type='submit'>Add!</button>
             </form>
         </div>
     );

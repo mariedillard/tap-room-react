@@ -1,0 +1,1 @@
+   Object.keys(props.beersList).delete({props.selectedBeers.key})
