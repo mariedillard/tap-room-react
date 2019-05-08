@@ -44,3 +44,9 @@ function NewBeersForm(props) {
         </div>
     )
 }
+
+NewBeersForm.propTypes = {
+    onNewBeersCreation: PropTypes.func
+};
+
+export default NewBeersForm;
