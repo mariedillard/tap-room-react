@@ -13,6 +13,7 @@ function BeersList(props){
                     price={beers.price}
                     alcoholContent={beers.alcoholContent}
                     currentRouterPath={props.currentRouterPath}
+                    key={beersId}
                     beersId={beersId}
                     onBeersSelection={props.onBeersSelection}/>;
             })}
