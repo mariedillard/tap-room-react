@@ -1,1 +1,6 @@
-   Object.keys(props.beersList).delete({props.selectedBeers.key})
+import React from 'react';
+
+   function DeleteBeers(key) {
+      Object.keys(props.beersList).delete(key);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+   }
