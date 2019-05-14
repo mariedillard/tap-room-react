@@ -4,9 +4,24 @@ import PropTypes from 'prop-types';
 function Beers(props){
     const beersInformation =
         <div>
-            <h3>{props.name}</h3>
-            <h4>{props.brand}</h4>
-            <h5>$ {props.price}</h5>
+            <style jsx>{`
+                div {
+                    background-color: #FAC9B8;
+                    text-align: center;
+                    width: 200px;
+                    height: 200px;
+                    padding: 50px;
+                    margin: 50px;
+                    float: left;
+                    border-style: solid;
+                    border-radius: 5px;
+                    border-color: #212D40;
+                    border-width: 15px;
+                }
+            `}</style>
+            <h1>{props.name}</h1>
+            <h3>{props.brand}</h3>
+            <h4>{props.price}</h4>
             <h5>{props.alcoholContent}%</h5>
         </div>;
     if (props.currentRouterPath === '/admin') {

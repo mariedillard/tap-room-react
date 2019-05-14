@@ -18,7 +18,7 @@ class App extends React.Component {
         };
         this.handleAddingNewBeersToList = this.handleAddingNewBeersToList.bind(this);
         this.handleChangingSelectedBeers = this.handleChangingSelectedBeers.bind(this);
-        this.handleDeletingSelectedBeers = this.handleDeletingSelectedBeers.bind(this);
+        /* this.handleDeletingSelectedBeers = this.handleDeletingSelectedBeers.bind(this); */
     }
 
     handleAddingNewBeersToList(newBeers) {
@@ -44,7 +44,7 @@ class App extends React.Component {
                     <Route path='/admin' render={()=><Admin beersList={this.state.masterBeersList} 
                         onBeersSelection={this.handleChangingSelectedBeers}
                         selectedBeers={this.state.selectedBeers}/>} />
-                    <Route path='/newbeer' render={()=><NewBeersForm onNewsBeersCreation={this.handleAddingNewBeersToList} />} />
+                    <Route path='/newbeer' render={()=><NewBeersForm onNewBeersCreation={this.handleAddingNewBeersToList} />} />
                     <Route component={Error404} />
                 </Switch>
             </div>
